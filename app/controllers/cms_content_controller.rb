@@ -51,9 +51,7 @@ protected
         params[:cms_path].gsub!(/^#{@cms_site.path}/, '')
         params[:cms_path].to_s.gsub!(/^\//, '')
       end
-      I18n.locale = @cms_site.locale
     else
-      I18n.locale = I18n.default_locale
       raise ActionController::RoutingError.new('Site Not Found')
     end
   end
