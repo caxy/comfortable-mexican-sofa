@@ -29,6 +29,7 @@
   <%= render :partial => 'cms_admin/categories/form', :object => form %>
 </div>
 
+<%= render :partial => 'meta_tags', locals: {form: form} %>
 <%= render :partial => 'form_blocks' %>
 
 <%= form.simple_field nil, nil, :class => 'submit_element' do %>

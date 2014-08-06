@@ -14,6 +14,15 @@ module ComfortableMexicanSofa::ViewMethods
   def cms_hook(name, options = {})
     ComfortableMexicanSofa::ViewHooks.render(name, self, options)
   end
+
+  # Puts page meta tags as html_safe
+  def cms_meta_keywords(page = nil)
+    content_tag(:meta, '', {name: "keywords", content: page.meta_keywords})
+  end
+
+  def cms_meta_description(page = nil)
+    content_tag(:meta, '', {name: "description", content: page.meta_description})
+  end
   
   # Content of a snippet. Example:
   #   cms_snippet_content(:my_snippet)
