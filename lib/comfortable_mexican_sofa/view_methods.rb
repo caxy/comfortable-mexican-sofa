@@ -23,6 +23,10 @@ module ComfortableMexicanSofa::ViewMethods
   def cms_meta_description(page = nil)
     content_tag(:meta, '', {name: "description", content: page.meta_description})
   end
+
+  def cms_meta_title(page = nil)
+    content_tag(:meta, '', {name: "title", content: page.label})
+  end
   
   # Content of a snippet. Example:
   #   cms_snippet_content(:my_snippet)
